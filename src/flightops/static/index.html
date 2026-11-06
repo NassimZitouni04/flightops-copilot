@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlightOps Copilot</title>
+<style>
+  :root { --bg:#f7f8f9; --panel:#fff; --ink:#1f2933; --muted:#616e7c; --line:#d5dae0; --accent:#1f4e9e; --warn:#8a4b00; --warnbg:#fff4e0; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#14181d; --panel:#1d232a; --ink:#e6e9ec; --muted:#9aa5b1; --line:#323b45; --accent:#8db4f5; --warn:#f5c078; --warnbg:#33270f; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 system-ui,sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { margin:0; font-size:26px; }
+  .sub { color:var(--muted); margin:4px 0 16px; }
+  .note { background:var(--warnbg); color:var(--warn); border-radius:8px; padding:10px 12px; font-size:14px; margin-bottom:16px; }
+  textarea { width:100%; min-height:88px; padding:12px; border:1px solid var(--line); border-radius:8px; background:var(--panel); color:var(--ink); font:inherit; resize:vertical; }
+  .actions { display:flex; gap:8px; margin:10px 0 20px; flex-wrap:wrap; }
+  button { padding:9px 16px; border-radius:8px; border:1px solid var(--line); background:var(--panel); color:var(--ink); font:inherit; cursor:pointer; }
+  button.primary { background:var(--accent); border-color:var(--accent); color:var(--bg); font-weight:600; }
+  button:disabled { opacity:.55; cursor:wait; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:14px; margin-bottom:12px; overflow-wrap:anywhere; }
+  .answer { white-space:pre-wrap; }
+  .meta { color:var(--muted); font-size:13px; margin-top:10px; }
+  a { color:var(--accent); }
+  .passage { white-space:pre-wrap; font-size:14px; color:var(--muted); max-height:9em; overflow:hidden; margin-top:6px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>FlightOps Copilot</h1>
+  <p class="sub">Ask about FAA Part 107 and PX4, or check live weather and airspace.</p>
+  <p class="note">A portfolio project for planning support. It doesn't replace LAANC, NOTAM and TFR checks, or the remote pilot's judgment.</p>
+  <label for="q">Your question</label>
+  <textarea id="q" placeholder="Can I fly at 300 ft near KPHX right now? What does PX4 do when the data link is lost?"></textarea>
+  <div class="actions">
+    <button class="primary" id="ask">Ask the agent</button>
+    <button id="search">Search documents only</button>
+  </div>
+  <div id="out" aria-live="polite"></div>
+</main>
+<script>
+  const out = document.getElementById("out");
+  const q = document.getElementById("q");
+  const buttons = [document.getElementById("ask"), document.getElementById("search")];
+
+  function card(cls) {
+    const el = document.createElement("div");
+    el.className = "card " + (cls || "");
+    out.appendChild(el);
+    return el;
+  }
+  function link(url, label) {
+    const a = document.createElement("a");
+    a.href = url; a.textContent = label; a.target = "_blank"; a.rel = "noopener";
+    return a;
+  }
+  async function post(path, body) {
+    const res = await fetch(path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    const data = await res.json();
+    if (!res.ok) throw new Error(typeof data.detail === "string" ? data.detail : "Please enter a longer question.");
+    return data;
+  }
+  async function run(fn) {
+    if (!q.value.trim()) return;
+    buttons.forEach(b => b.disabled = true);
+    out.textContent = "Working...";
+    try { const render = await fn(); out.textContent = ""; render(); }
+    catch (e) { out.textContent = ""; card().textContent = e.message; }
+    buttons.forEach(b => b.disabled = false);
+  }
+  buttons[0].onclick = () => run(async () => {
+    const d = await post("/api/ask", { question: q.value });
+    return () => {
+      const a = card(); const t = document.createElement("div"); t.className = "answer"; t.textContent = d.answer; a.appendChild(t);
+      if (d.sources.length) { const s = card(); s.append("Sources: "); d.sources.forEach((x, i) => { if (i) s.append(", "); s.appendChild(link(x.url, x.doc)); }); }
+      const m = document.createElement("div"); m.className = "meta";
+      m.textContent = `Tools: ${d.tools_used.map(t => t.name).join(", ") || "none"} | ${d.seconds} s | $${d.cost_usd.toFixed(4)}`;
+      a.appendChild(m);
+    };
+  });
+  buttons[1].onclick = () => run(async () => {
+    const d = await post("/api/search", { query: q.value, k: 5 });
+    return () => d.results.forEach(r => {
+      const c = card(); c.appendChild(link(r.url, r.title));
+      const p = document.createElement("div"); p.className = "passage"; p.textContent = r.text; c.appendChild(p);
+    });
+  });
+</script>
+</body>
+</html>

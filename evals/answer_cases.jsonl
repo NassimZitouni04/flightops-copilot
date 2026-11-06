@@ -1,0 +1,13 @@
+{"id":"altitude","q":"What is the maximum altitude for a Part 107 flight, and is there an exception?","must_match":["400","structure"],"required_tools":["search_docs"],"required_doc":"14 CFR 107.51"}
+{"id":"speed","q":"How fast can my small drone legally go?","must_match":["87 knots|100 (miles per hour|mph)"],"required_tools":["search_docs"],"required_doc":"14 CFR 107.51"}
+{"id":"visibility","q":"What minimum flight visibility does Part 107 require?","must_match":["3 statute miles|3 SM|three statute miles"],"required_tools":["search_docs"],"required_doc":"14 CFR 107.51"}
+{"id":"clouds","q":"How far from clouds must I stay under Part 107?","must_match":["500","2,000"],"required_tools":["search_docs"],"required_doc":"14 CFR 107.51"}
+{"id":"airspace_rule","q":"Do I need authorization to fly in Class C airspace under Part 107?","must_match":["(?i)air traffic control|ATC"],"required_tools":["search_docs"],"required_doc":"14 CFR 107.41"}
+{"id":"night","q":"What lighting do I need to fly at night?","must_match":["(?i)anti-collision","3 statute miles|3 SM"],"required_tools":["search_docs"],"required_doc":"14 CFR 107.29"}
+{"id":"accident_report","q":"How long do I have to report a serious-injury drone accident to the FAA?","must_match":["(?i)10 (calendar )?days|10-day"],"required_tools":["search_docs"],"required_doc":"14 CFR 107.9"}
+{"id":"datalink","q":"In PX4, what setting controls the response when the data link to the ground station is lost?","must_match":["NAV_DLL_ACT|COM_DL_LOSS"],"required_tools":["search_docs"],"required_doc":"config/safety"}
+{"id":"geofence","q":"What does PX4 offer for keeping a vehicle inside a defined area?","must_match":["(?i)geofence"],"required_tools":["search_docs"],"required_doc":"flying/geofence"}
+{"id":"rally","q":"In PX4 what are safety points used for?","must_match":["(?i)return|land"],"required_tools":["search_docs"],"required_doc":"flying/plan_safety_points"}
+{"id":"live_weather","q":"Does the current weather at KPHX meet Part 107 limits for a flight at 200 feet AGL?","must_match":["(?i)KPHX"],"required_tools":["check_part107_weather"]}
+{"id":"live_airspace","q":"Do I need ATC authorization at latitude 33.43, longitude -111.97?","must_match":["(?i)class b","(?i)authorization"],"required_tools":["lookup_airspace"]}
+{"id":"out_of_scope","q":"What are the drone registration rules in Japan?","must_match":["(?i)(don't|do not|doesn't|does not|cannot|can't|not cover|outside|no information|unable)"],"must_not_match":["(?i)according to 14 CFR.*Japan"],"required_tools":[]}

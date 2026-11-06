@@ -1,0 +1,48 @@
+{"q":"How high above the ground can I legally fly my drone?","docs":["14 CFR 107.51"]}
+{"q":"What is the top groundspeed allowed for a small UAS?","docs":["14 CFR 107.51"]}
+{"q":"How much visibility do I need from where the pilot is standing?","docs":["14 CFR 107.51"]}
+{"q":"How far do I have to stay away from clouds?","docs":["14 CFR 107.51"]}
+{"q":"Do I need permission from the tower to fly close to a major airport?","docs":["14 CFR 107.41"]}
+{"q":"Am I allowed to fly after dark?","docs":["14 CFR 107.29"]}
+{"q":"What lights does my aircraft need around dusk?","docs":["14 CFR 107.29"]}
+{"q":"Can I fly right above bystanders who are not part of my crew?","docs":["14 CFR 107.39","14 CFR 107.100"]}
+{"q":"Do I have to keep the aircraft in sight with my own eyes, or can I use binoculars?","docs":["14 CFR 107.31"]}
+{"q":"Can a single pilot control two drones at the same time?","docs":["14 CFR 107.35"]}
+{"q":"Can I operate the drone while riding in a car?","docs":["14 CFR 107.25"]}
+{"q":"Is my drone allowed to carry dangerous goods?","docs":["14 CFR 107.36"]}
+{"q":"Who yields when a manned airplane comes near my quadcopter?","docs":["14 CFR 107.37"]}
+{"q":"Someone was seriously injured in a crash. When do I have to tell the FAA?","docs":["14 CFR 107.9"]}
+{"q":"What should I inspect and review before launching?","docs":["14 CFR 107.49"]}
+{"q":"How old do I have to be to get a remote pilot certificate?","docs":["14 CFR 107.61"]}
+{"q":"How often do I need to renew my aeronautical knowledge?","docs":["14 CFR 107.65"]}
+{"q":"Can I release a package or drop things from the aircraft in flight?","docs":["14 CFR 107.23"]}
+{"q":"Can I enter a prohibited or restricted zone?","docs":["14 CFR 107.45"]}
+{"q":"Which rules can be waived and how do I apply?","docs":["14 CFR 107.200","14 CFR 107.205"]}
+{"q":"Can I act as pilot if I have been drinking?","docs":["14 CFR 107.27","14 CFR 107.57"]}
+{"q":"What weight counts as a small unmanned aircraft?","docs":["14 CFR 107.3"]}
+{"q":"What rules apply to flying over cars that are moving?","docs":["14 CFR 107.145"]}
+{"q":"How long is an interim remote pilot certificate good for?","docs":["14 CFR 107.64"]}
+{"q":"What happens when the battery runs low on a PX4 vehicle?","docs":["config/safety"]}
+{"q":"What does the autopilot do if it loses contact with the ground station?","docs":["config/safety"]}
+{"q":"What is the response when the RC transmitter signal drops out?","docs":["config/safety"]}
+{"q":"How do I keep a vehicle inside a virtual boundary?","docs":["flying/geofence","config/safety"]}
+{"q":"How can I set backup landing sites other than the home position?","docs":["flying/plan_safety_points","flight_modes/return"]}
+{"q":"How do I start the motors on a multicopter before takeoff?","docs":["flying/basic_flying_mc"]}
+{"q":"Why does QGroundControl refuse to let me arm?","docs":["flying/pre_flight_checks"]}
+{"q":"What altitude does a multicopter climb to before coming home?","docs":["flight_modes_mc/return","flight_modes/return"]}
+{"q":"Which automatic mode makes a copter hover in one spot and wait?","docs":["flight_modes_mc/hold"]}
+{"q":"How do I circle around a point of interest?","docs":["flight_modes_mc/orbit"]}
+{"q":"Can the copter track me using my phone's location?","docs":["flight_modes_mc/follow_me"]}
+{"q":"How do I command the vehicle from a companion computer?","docs":["flight_modes/offboard"]}
+{"q":"How do I maintain constant height over hilly ground using a distance sensor?","docs":["flying/terrain_following_holding"]}
+{"q":"How do I plan a cargo drop with a gripper?","docs":["flying/package_delivery_mission"]}
+{"q":"Can I launch a quadcopter by tossing it into the air?","docs":["flight_modes_mc/throw_launch"]}
+{"q":"How do I take off from the deck of a boat?","docs":["flight_modes_mc/takeoff"]}
+{"q":"How do I correct a wrong battery voltage reading?","docs":["config/battery"]}
+{"q":"Which mode holds height without GPS while I steer with the sticks?","docs":["flight_modes_mc/altitude"]}
+{"q":"Why would a mission be rejected before it starts?","docs":["flight_modes_mc/mission","flying/missions"]}
+{"q":"What should I think about when choosing where to do my very first flight?","docs":["flying/first_flight_guidelines"]}
+{"q":"Which mode lets me do flips and aerobatics?","docs":["flight_modes_mc/acro"]}
+{"q":"What does a copter do if it can't estimate its position and has no way to hold it?","docs":["flight_modes_mc/descend","config/safety"]}
+{"q":"Which flight modes need a global position estimate?","docs":["flight_modes/mode_requirements","flight_modes_mc/index"]}
+{"q":"How do I cap speed so a beginner flies gently in a GPS-assisted mode?","docs":["flight_modes_mc/position_slow"]}

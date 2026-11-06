@@ -1,0 +1,528 @@
+{
+  "questions": 48,
+  "modes": {
+    "bm25": {
+      "hit_at_1": 0.2708,
+      "hit_at_5": 0.5417,
+      "mrr_at_10": 0.4012,
+      "misses_at_5": [
+        {
+          "q": "How high above the ground can I legally fly my drone?",
+          "top": [
+            "14 CFR 107.79",
+            "flight_modes_mc/follow_me",
+            "flight_modes_mc/position"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "What is the top groundspeed allowed for a small UAS?",
+          "top": [
+            "14 CFR 107.57",
+            "14 CFR 107.64",
+            "14 CFR 107.12"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.14285714285714285
+        },
+        {
+          "q": "How far do I have to stay away from clouds?",
+          "top": [
+            "config/safety",
+            "config/safety",
+            "flight_modes_mc/throw_launch"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "Do I need permission from the tower to fly close to a major airport?",
+          "top": [
+            "config/safety",
+            "flying/package_delivery_mission",
+            "config/safety"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "Am I allowed to fly after dark?",
+          "top": [
+            "config/safety",
+            "config/safety",
+            "config/safety"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "What lights does my aircraft need around dusk?",
+          "top": [
+            "14 CFR 107.79",
+            "flight_modes_mc/throw_launch",
+            "flying/basic_flying_fw"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "Can I fly right above bystanders who are not part of my crew?",
+          "top": [
+            "14 CFR 107.79",
+            "14 CFR 107.74",
+            "14 CFR 107.140"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "Do I have to keep the aircraft in sight with my own eyes, or can I use binoculars?",
+          "top": [
+            "14 CFR 107.79",
+            "14 CFR 107.140",
+            "flight_modes_mc/throw_launch"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "Can I operate the drone while riding in a car?",
+          "top": [
+            "14 CFR 107.140",
+            "14 CFR 107.125",
+            "flight_modes/offboard"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "Is my drone allowed to carry dangerous goods?",
+          "top": [
+            "14 CFR 107.79",
+            "flight_modes_mc/follow_me",
+            "flying/missions"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.16666666666666666
+        },
+        {
+          "q": "Who yields when a manned airplane comes near my quadcopter?",
+          "top": [
+            "14 CFR 107.79",
+            "14 CFR 107.165",
+            "14 CFR 107.71"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.14285714285714285
+        },
+        {
+          "q": "Someone was seriously injured in a crash. When do I have to tell the FAA?",
+          "top": [
+            "14 CFR 107.160",
+            "14 CFR 107.160",
+            "14 CFR 107.130"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "What should I inspect and review before launching?",
+          "top": [
+            "flying/index",
+            "flight_modes_mc/throw_launch",
+            "flight_modes_mc/throw_launch"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "How old do I have to be to get a remote pilot certificate?",
+          "top": [
+            "14 CFR 107.7",
+            "14 CFR 107.79",
+            "14 CFR 107.64"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.14285714285714285
+        },
+        {
+          "q": "Can I release a package or drop things from the aircraft in flight?",
+          "top": [
+            "flying/package_delivery_mission",
+            "flying/package_delivery_mission",
+            "flying/package_delivery_mission"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "Which rules can be waived and how do I apply?",
+          "top": [
+            "14 CFR 107.2",
+            "14 CFR 107.130",
+            "14 CFR 107.120"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "Can I act as pilot if I have been drinking?",
+          "top": [
+            "14 CFR 107.79",
+            "14 CFR 107.140",
+            "14 CFR 107.35"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.125
+        },
+        {
+          "q": "What weight counts as a small unmanned aircraft?",
+          "top": [
+            "14 CFR 107.37",
+            "14 CFR 107.125",
+            "14 CFR 107.17"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "Which automatic mode makes a copter hover in one spot and wait?",
+          "top": [
+            "flight_modes_mc/return",
+            "config/safety",
+            "flight_modes/offboard"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.1111111111111111
+        },
+        {
+          "q": "How do I command the vehicle from a companion computer?",
+          "top": [
+            "14 CFR 107.7",
+            "14 CFR 107.21",
+            "14 CFR 107.29"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.14285714285714285
+        },
+        {
+          "q": "What should I think about when choosing where to do my very first flight?",
+          "top": [
+            "14 CFR 107.79",
+            "flight_modes_mc/throw_launch",
+            "flight_modes/index"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.16666666666666666
+        },
+        {
+          "q": "How do I cap speed so a beginner flies gently in a GPS-assisted mode?",
+          "top": [
+            "flight_modes_mc/index",
+            "flight_modes/return",
+            "flying/basic_flying_fw"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        }
+      ]
+    },
+    "dense": {
+      "hit_at_1": 0.625,
+      "hit_at_5": 0.8542,
+      "mrr_at_10": 0.7128,
+      "misses_at_5": [
+        {
+          "q": "How high above the ground can I legally fly my drone?",
+          "top": [
+            "flying/first_flight_guidelines",
+            "flying/first_flight_guidelines",
+            "flight_modes_mc/position"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.16666666666666666
+        },
+        {
+          "q": "Do I need permission from the tower to fly close to a major airport?",
+          "top": [
+            "14 CFR 107.43",
+            "flying/first_flight_guidelines",
+            "14 CFR 107.45"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.16666666666666666
+        },
+        {
+          "q": "Can I operate the drone while riding in a car?",
+          "top": [
+            "flying/basic_flying_fw",
+            "flying/first_flight_guidelines",
+            "flying/basic_flying_mc"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.16666666666666666
+        },
+        {
+          "q": "What should I inspect and review before launching?",
+          "top": [
+            "flight_modes_mc/throw_launch",
+            "flying/pre_flight_checks",
+            "flying/index"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "Can I release a package or drop things from the aircraft in flight?",
+          "top": [
+            "flying/package_delivery_mission",
+            "flying/package_delivery_mission",
+            "flying/package_delivery_mission"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.125
+        },
+        {
+          "q": "Which automatic mode makes a copter hover in one spot and wait?",
+          "top": [
+            "flight_modes_mc/position",
+            "flight_modes_mc/manual_stabilized",
+            "flight_modes_mc/land"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "What does a copter do if it can't estimate its position and has no way to hold it?",
+          "top": [
+            "flight_modes_mc/hold",
+            "flight_modes_mc/position",
+            "flight_modes_mc/hold"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.125
+        }
+      ]
+    },
+    "hybrid": {
+      "hit_at_1": 0.5625,
+      "hit_at_5": 0.7708,
+      "mrr_at_10": 0.6531,
+      "misses_at_5": [
+        {
+          "q": "Do I need permission from the tower to fly close to a major airport?",
+          "top": [
+            "14 CFR 107.45",
+            "14 CFR 107.37",
+            "flight_modes_mc/follow_me"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "Am I allowed to fly after dark?",
+          "top": [
+            "config/safety",
+            "flying/pre_flight_checks",
+            "flying/pre_flight_checks"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.16666666666666666
+        },
+        {
+          "q": "What lights does my aircraft need around dusk?",
+          "top": [
+            "14 CFR 107.31",
+            "flying/basic_flying_fw",
+            "14 CFR 107.49"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.16666666666666666
+        },
+        {
+          "q": "Can I fly right above bystanders who are not part of my crew?",
+          "top": [
+            "14 CFR 107.125",
+            "14 CFR 107.43",
+            "14 CFR 107.79"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.125
+        },
+        {
+          "q": "Can I operate the drone while riding in a car?",
+          "top": [
+            "flying/basic_flying_fw",
+            "flying/basic_flying_mc",
+            "14 CFR 107.43"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "What should I inspect and review before launching?",
+          "top": [
+            "flight_modes_mc/throw_launch",
+            "flying/index",
+            "14 CFR 107.7"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "Can I release a package or drop things from the aircraft in flight?",
+          "top": [
+            "flying/package_delivery_mission",
+            "flying/package_delivery_mission",
+            "flying/package_delivery_mission"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.125
+        },
+        {
+          "q": "Which rules can be waived and how do I apply?",
+          "top": [
+            "14 CFR 107.79",
+            "14 CFR 107.130",
+            "14 CFR 107.165"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.125
+        },
+        {
+          "q": "What is the response when the RC transmitter signal drops out?",
+          "top": [
+            "flight_modes_mc/orbit",
+            "flight_modes_mc/follow_me",
+            "flight_modes_mc/manual_stabilized"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.14285714285714285
+        },
+        {
+          "q": "Which automatic mode makes a copter hover in one spot and wait?",
+          "top": [
+            "flight_modes_mc/manual_stabilized",
+            "flight_modes_mc/position",
+            "flight_modes_mc/land"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.16666666666666666
+        },
+        {
+          "q": "How do I cap speed so a beginner flies gently in a GPS-assisted mode?",
+          "top": [
+            "flight_modes_mc/position",
+            "flying/basic_flying_mc",
+            "flight_modes_mc/takeoff"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        }
+      ]
+    },
+    "hybrid_rerank": {
+      "hit_at_1": 0.6667,
+      "hit_at_5": 0.8958,
+      "mrr_at_10": 0.7733,
+      "misses_at_5": [
+        {
+          "q": "Can I fly right above bystanders who are not part of my crew?",
+          "top": [
+            "14 CFR 107.37",
+            "flying/first_flight_guidelines",
+            "14 CFR 107.125"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.14285714285714285
+        },
+        {
+          "q": "Can I operate the drone while riding in a car?",
+          "top": [
+            "flying/basic_flying_mc",
+            "flying/basic_flying_fw",
+            "flight_modes_mc/position"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.125
+        },
+        {
+          "q": "What should I inspect and review before launching?",
+          "top": [
+            "flight_modes_mc/throw_launch",
+            "flight_modes_mc/throw_launch",
+            "flight_modes_mc/throw_launch"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.0
+        },
+        {
+          "q": "What is the response when the RC transmitter signal drops out?",
+          "top": [
+            "flight_modes_mc/orbit",
+            "flight_modes_mc/altitude",
+            "flight_modes/offboard"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.14285714285714285
+        },
+        {
+          "q": "How do I cap speed so a beginner flies gently in a GPS-assisted mode?",
+          "top": [
+            "flight_modes_mc/position",
+            "flying/basic_flying_fw",
+            "flying/basic_flying_mc"
+          ],
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "rr": 0.125
+        }
+      ]
+    }
+  }
+}

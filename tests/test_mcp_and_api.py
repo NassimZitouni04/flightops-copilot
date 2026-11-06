@@ -65,6 +65,20 @@ async def test_real_stdio_server_lists_tools():
     assert {t["name"] for t in tools} == EXPECTED_TOOLS
 
 
+async def test_real_stdio_server_receives_settings_but_not_the_api_key(monkeypatch):
+    monkeypatch.setenv("FLIGHTOPS_RETRIEVAL_MODE", "bm25")  # BM25 needs no model downloads.
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "secret")
+    params = stdio_server()
+    assert params.env["FLIGHTOPS_RETRIEVAL_MODE"] == "bm25"
+    assert "ANTHROPIC_API_KEY" not in params.env
+    async with Client(params) as client:
+        output, is_error = await McpTools(client).call_tool(
+            "search_docs", {"query": "anti-collision lighting civil twilight", "k": 3}
+        )
+    assert is_error is False
+    assert "14 CFR 107.29" in [r["doc"] for r in json.loads(output)["results"]]
+
+
 class FakeAgent:
     async def ask(self, question):
         return {"answer": f"echo {question}", "sources": [], "tools_used": []}

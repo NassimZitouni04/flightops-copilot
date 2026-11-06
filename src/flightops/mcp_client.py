@@ -2,14 +2,22 @@
 
 from __future__ import annotations
 
+import os
 import sys
 
 from mcp import Client, StdioServerParameters
 
+# The MCP client starts servers with a minimal environment, so settings the server needs must be
+# passed on explicitly. The API key is deliberately left out: the server never calls the model.
+SERVER_ENV_VARS = ("PYTHONPATH", "FASTEMBED_CACHE_PATH", "FLIGHTOPS_RETRIEVAL_MODE")
+
 
 def stdio_server() -> StdioServerParameters:
     """Launch the FlightOps MCP server as a subprocess of this Python interpreter."""
-    return StdioServerParameters(command=sys.executable, args=["-m", "flightops.mcp_server"])
+    env = {name: os.environ[name] for name in SERVER_ENV_VARS if name in os.environ}
+    return StdioServerParameters(
+        command=sys.executable, args=["-m", "flightops.mcp_server"], env=env
+    )
 
 
 class McpTools:

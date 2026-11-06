@@ -101,10 +101,20 @@ python -m flightops.ingest            # Refresh the documents
 python -m flightops.mcp_server        # Run the MCP server on its own
 ```
 
+### Run with Docker
+
+The image includes the search models, runs as a non-root user and contains no API key.
+
+```bash
+docker build -t flightops-copilot .
+docker run --rm -p 8000:8000 --env-file .env flightops-copilot
+```
+
+Leave out `--env-file .env` to run search only. CI builds the image and tests search inside it on every push.
+
 ## Known limitations
 
-- The app isn't deployed anywhere, so it runs locally with your own API key.
-- The Dockerfile hasn't been built or tested.
+- The app isn't hosted anywhere, so it runs locally or in Docker with your own API key.
 - The airspace check only looks for controlled layers reaching the surface. It doesn't check TFRs, NOTAMs, LAANC grid ceilings, special-use airspace or stadium restrictions.
 - METARs describe the reporting station, not your flight site, and only cover airports that report.
 - PX4 coverage is limited to flying, flight mode and safety pages, mostly for multicopters.

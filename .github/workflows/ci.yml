@@ -38,3 +38,17 @@ jobs:
         run: python evals/retrieval_eval.py --gate
         env:
           FASTEMBED_CACHE_PATH: .cache/fastembed
+
+  docker-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t flightops-copilot .
+      - run: docker run -d --name app -p 8000:8000 flightops-copilot
+      - name: Check that the app starts and search works inside the container
+        run: |
+          curl -fsS --retry 30 --retry-all-errors --retry-delay 2 http://127.0.0.1:8000/api/health
+          curl -fsS -X POST http://127.0.0.1:8000/api/search             -H 'content-type: application/json'             -d '{"query": "How far must I stay below clouds?", "k": 3}' | grep -q '14 CFR 107.51'
+      - name: Show container logs on failure
+        if: failure()
+        run: docker logs app

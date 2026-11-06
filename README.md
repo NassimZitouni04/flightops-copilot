@@ -116,8 +116,4 @@ python -m flightops.mcp_server        # Run the MCP server on its own
 - [PX4 User Guide](https://docs.px4.io/main/en/), © PX4 Dev Team, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Excerpts in `data/corpus.jsonl` were cleaned of markup and split into chunks. The commit is pinned in `data/manifest.json`.
 - Live data from the [NOAA Aviation Weather Center](https://aviationweather.gov/data/api/) and the [FAA Class Airspace dataset](https://adds-faa.opendata.arcgis.com/).
 
-## Credits
 
-Built by Nassim Zitouni with [Claude Code](https://claude.com/claude-code), which wrote most of the code. See the commit history.
-
-Code is under the [MIT License](LICENSE). The data keeps the licenses listed above.

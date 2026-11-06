@@ -109,13 +109,13 @@ async def test_tool_loop_replays_history_correctly():
                 ],
                 "tool_use",
             ),
-            message([text("400 feet, per 14 CFR 107.51.")], "end_turn"),
+            message([text("400 feet, per [14 CFR 107.51](u1).")], "end_turn"),
         ],
         tools,
     )
     result = await agent.ask("How high?")
 
-    assert result["answer"] == "400 feet, per 14 CFR 107.51."
+    assert result["answer"] == "400 feet, per [14 CFR 107.51](u1)."
     assert tools.calls == [("search_docs", {"query": "altitude"})]
     assert result["sources"] == [{"doc": "14 CFR 107.51", "url": "u1"}]
     assert result["model_turns"] == 2
@@ -233,4 +233,16 @@ def test_extract_sources_skips_errors_and_bad_json_and_deduplicates():
             "result": '{"results":[{"doc":"a","url":"u"},{"doc":"a","url":"u"}]}',
         },
     ]
-    assert extract_sources(log) == [{"doc": "a", "url": "u"}]
+    assert extract_sources(log, "See [a](u).") == [{"doc": "a", "url": "u"}]
+
+
+def test_extract_sources_keeps_only_what_the_answer_cites():
+    results = [
+        {"doc": "14 CFR 107.51", "url": "cfr"},
+        {"doc": "flying/geofence", "url": "https://px4/geofence"},
+        {"doc": "flight_modes_mc/follow_me", "url": "https://px4/follow"},
+    ]
+    log = [{"name": "search_docs", "is_error": False, "result": json.dumps({"results": results})}]
+    answer = "Limits are in 107.51. See [Geofence](https://px4/geofence)."
+    assert [s["doc"] for s in extract_sources(log, answer)] == ["14 CFR 107.51", "flying/geofence"]
+    assert extract_sources(log, "No citations here.") == []

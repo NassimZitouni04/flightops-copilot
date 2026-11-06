@@ -59,9 +59,21 @@ CI fails if reranked Hit@5 drops below 80%.
 
 ### Answers
 
-`evals/answer_eval.py` runs 13 end-to-end cases and grades them in code: required facts, required tools and required source documents.
+`evals/answer_eval.py` runs 13 end-to-end cases on live Claude (`claude-opus-5-5`) and grades them in code: required facts, required tools and citation of the required document.
 
-**Not yet run.** It needs an API key, so no pass rate, latency or cost figures are claimed here.
+| Measure | Result |
+|---|---|
+| Cases passed | 13 of 13 |
+| Median time per question | 8.5 s |
+| Slowest question | 16.5 s |
+| Average cost per question | $0.023 |
+
+How far to trust this:
+
+- It's one run of a small set, written by the project's authors, and most questions are direct lookups.
+- The grader checks for required content, not every sentence. The answers in `evals/results/answers.json` were also read by hand.
+- Live weather and airspace cases can't check values that change, so they confirm the right tool ran and the answer has the expected content.
+- Answers sometimes add correct details from the model's own knowledge, such as FAA DroneZone, even though the prompt asks it to rely on tool results.
 
 ### Tests
 
@@ -91,7 +103,7 @@ python -m flightops.mcp_server        # Run the MCP server on its own
 
 ## Known limitations
 
-- The agent hasn't been run against the live Claude API yet, and the app isn't deployed anywhere.
+- The app isn't deployed anywhere, so it runs locally with your own API key.
 - The Dockerfile hasn't been built or tested.
 - The airspace check only looks for controlled layers reaching the surface. It doesn't check TFRs, NOTAMs, LAANC grid ceilings, special-use airspace or stadium restrictions.
 - METARs describe the reporting station, not your flight site, and only cover airports that report.

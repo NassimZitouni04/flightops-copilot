@@ -1,0 +1,158 @@
+{
+  "summary": {
+    "cases": 13,
+    "passed": 13,
+    "pass_rate": 1.0,
+    "p50_seconds": 8.527,
+    "p95_seconds": 16.49,
+    "total_cost_usd": 0.3046,
+    "mean_cost_usd": 0.0234
+  },
+  "rows": [
+    {
+      "id": "altitude",
+      "passed": true,
+      "failures": [],
+      "seconds": 9.459,
+      "cost_usd": 0.028141,
+      "tools": [
+        "search_docs"
+      ],
+      "answer": "Under Part 107, the maximum altitude is **400 feet above ground level (AGL)**. There's one exception for flying near structures. ([14 CFR 107.51(b)](https://www.ecfr.gov/current/title-14/section-107.51))\n\n**The structure exception:** You can fly higher than 400 ft AGL only if the drone stays:\n1. Within a **400-foot radius** of a structure, and\n2. No more than **400 feet above the top of that structure**.\n\nFor example, if you're inspecting a 300 ft tower, you could fly up to 700 ft AGL as long as you stay within 400 ft of the tower sideways.\n\n**Waivers:** The FAA can also waive \u00a7 107.51, including the altitude limit, through a certificate of waiver. ([14 CFR 107.205(i)](https://www.ecfr.gov/current/title-14/section-107.205))\n\n**Other limits in the same section** ([\u00a7 107.51](https://www.ecfr.gov/current/title-14/section-107.51)):\n- Maximum groundspeed: 87 knots (100 mph)\n- Minimum visibility: 3 statute miles\n- Distance from clouds: at least 500 ft below and 2,000 ft sideways\n\nThe altitude limit doesn't replace the airspace rules. In controlled airspace you still need ATC authorization (for example, through LAANC), and that may set a lower ceiling."
+    },
+    {
+      "id": "speed",
+      "passed": true,
+      "failures": [],
+      "seconds": 6.939,
+      "cost_usd": 0.022736,
+      "tools": [
+        "search_docs"
+      ],
+      "answer": "Under Part 107, the limit is **87 knots (100 mph) groundspeed**. ([14 CFR 107.51(a)](https://www.ecfr.gov/current/title-14/section-107.51))\n\n- **The limit is groundspeed, not airspeed.** A tailwind adds to your speed over the ground. With a tailwind, you can go over the limit even if your airspeed is below 87 knots.\n- **You can get a waiver.** Section 107.51 is on the list of rules the FAA can waive. ([14 CFR 107.205(i)](https://www.ecfr.gov/current/title-14/section-107.205))\n- **Other limits in the same section:** a ceiling of 400 ft AGL (unless you're within 400 ft of a structure), at least 3 statute miles of visibility, and at least 500 ft below and 2,000 ft horizontally from clouds. ([14 CFR 107.51](https://www.ecfr.gov/current/title-14/section-107.51))\n\nThis covers Part 107 (certificated remote pilot) operations only. If you fly for fun under the recreational exception, the documents I can search don't include those rules, so I can't confirm whether this limit applies to you."
+    },
+    {
+      "id": "visibility",
+      "passed": true,
+      "failures": [],
+      "seconds": 8.527,
+      "cost_usd": 0.020556,
+      "tools": [
+        "search_docs"
+      ],
+      "answer": "Part 107 requires at least **3 statute miles** of flight visibility, measured from the location of the control station ([14 CFR 107.51(c)](https://www.ecfr.gov/current/title-14/section-107.51)).\n\n- **What \"flight visibility\" means:** the average slant distance from the control station at which you can see and identify prominent unlighted objects by day, or prominent lighted objects by night.\n- **Distance from clouds:** the same section says the aircraft must stay at least 500 ft below clouds and at least 2,000 ft horizontally from them ([\u00a7 107.51(d)](https://www.ecfr.gov/current/title-14/section-107.51)).\n- **Waivers:** \u00a7 107.51 is on the list of rules you can get a waiver for, so a certificate of waiver can allow something different ([14 CFR 107.205(i)](https://www.ecfr.gov/current/title-14/section-107.205)).\n\nThe 3-mile rule is about visibility where you're standing. A nearby airport's weather report is helpful, but it doesn't replace your own check at the site. Before flying, you also have to assess local weather as part of your preflight check ([\u00a7 107.49(a)(1)](https://www.ecfr.gov/current/title-14/section-107.49))."
+    },
+    {
+      "id": "clouds",
+      "passed": true,
+      "failures": [],
+      "seconds": 8.2,
+      "cost_usd": 0.019624,
+      "tools": [
+        "search_docs"
+      ],
+      "answer": "Under [14 CFR 107.51(d)](https://www.ecfr.gov/current/title-14/section-107.51), your drone must stay at least:\n\n- **500 feet below** the cloud\n- **2,000 feet horizontally** from the cloud\n\n**Related limits in the same section:**\n- Visibility from your control station must be at least **3 statute miles** (107.51(c)).\n- Maximum altitude is **400 ft AGL**. The exception is flying within 400 ft of a structure, where you can go up to 400 ft above its top (107.51(b)).\n\n**What this means in practice:** To fly at the full 400 ft AGL, the cloud base must be at least **900 ft AGL** (400 + 500). If the clouds are lower, you have to fly lower.\n\n**Waivers:** Section 107.51 is on the list of rules you can get a waiver for under [\u00a7 107.205(i)](https://www.ecfr.gov/current/title-14/section-107.205). Without a waiver, these distances apply.\n\nIf you're planning a flight, I can check the latest METAR at a nearby airport against these limits. Just give me the station code, such as KPHX."
+    },
+    {
+      "id": "airspace_rule",
+      "passed": true,
+      "failures": [],
+      "seconds": 8.077,
+      "cost_usd": 0.019948,
+      "tools": [
+        "search_docs"
+      ],
+      "answer": "**Yes.** You need prior authorization from Air Traffic Control before flying a small UAS in Class C airspace under Part 107.\n\n[14 CFR 107.41](https://www.ecfr.gov/current/title-14/section-107.41) says no one may fly a small unmanned aircraft in Class B, C or D airspace, or inside the surface area of Class E airspace designated for an airport, without prior ATC authorization.\n\n**Waivers:** Section 107.41 is also on the list of rules that can be waived under [14 CFR 107.205(h)](https://www.ecfr.gov/current/title-14/section-107.205). So a certificate of waiver can allow a deviation from it.\n\n**What my sources don't cover:** The documents I searched don't explain how to request ATC authorization, such as through LAANC or FAADroneZone, or how long approval takes. Check current FAA guidance for that.\n\nIf you give me coordinates for your flight area, I can check which controlled airspace layers are there and whether authorization applies. That's only a first screen. You still need the actual ATC or LAANC authorization and your own NOTAM and TFR checks. The final go/no-go decision is up to you as remote pilot in command."
+    },
+    {
+      "id": "night",
+      "passed": true,
+      "failures": [],
+      "seconds": 8.6,
+      "cost_usd": 0.0233,
+      "tools": [
+        "search_docs"
+      ],
+      "answer": "For night flight under Part 107, you need **lighted anti-collision lighting visible for at least 3 statute miles, with a flash rate sufficient to avoid a collision** ([\u00a7 107.29](https://www.ecfr.gov/current/title-14/section-107.29)).\n\n**Details:**\n- **Brightness:** You can dim the anti-collision light if you decide that's safer in the conditions, but you can't turn it off ([\u00a7 107.29](https://www.ecfr.gov/current/title-14/section-107.29)).\n- **Civil twilight:** The same lighting rule applies during civil twilight. Outside Alaska, that's the 30 minutes before official sunrise and the 30 minutes after official sunset. In Alaska, the Air Almanac defines it ([\u00a7 107.29(b)\u2013(c)](https://www.ecfr.gov/current/title-14/section-107.29)).\n- **Pilot training:** Lights alone aren't enough. To fly at night, you must also have completed your initial knowledge test or training under \u00a7 107.65 after April 6, 2021 ([\u00a7 107.29(a)(1)](https://www.ecfr.gov/current/title-14/section-107.29)).\n- **Waivers:** You can get a waiver from the lighting requirement ([\u00a7 107.205(b)](https://www.ecfr.gov/current/title-14/section-107.205)). Night waivers issued before April 21, 2021 are no longer valid ([\u00a7 107.29(d)](https://www.ecfr.gov/current/title-14/section-107.29)).\n\n**What the rule doesn't say:** It doesn't require a light color, position or navigation lights, or a specific flash rate. If you want guidance on those, check FAA advisory material or your light maker's specs."
+    },
+    {
+      "id": "accident_report",
+      "passed": true,
+      "failures": [],
+      "seconds": 6.858,
+      "cost_usd": 0.017796,
+      "tools": [
+        "search_docs"
+      ],
+      "answer": "You have **10 calendar days** from the operation to report it to the FAA. This comes from [14 CFR 107.9](https://www.ecfr.gov/current/title-14/section-107.9).\n\nThe remote pilot in command must report any operation that involves at least one of these:\n- **Serious injury** to any person, or anyone **losing consciousness**\n- **Damage to property other than the drone**, unless the repair costs $500 or less (materials and labor), or the property is a total loss worth $500 or less\n\nThe rule says to report \"in a manner acceptable to the Administrator.\" The documents I searched don't say how to file, such as which online portal to use, so check the FAA's current instructions for that."
+    },
+    {
+      "id": "datalink",
+      "passed": true,
+      "failures": [],
+      "seconds": 7.066,
+      "cost_usd": 0.020332,
+      "tools": [
+        "search_docs"
+      ],
+      "answer": "The setting is **`NAV_DLL_ACT`**, shown as \"Failsafe Action\" under the Data Link Loss Failsafe. It decides what PX4 does when the connection to the last MAVLink ground station (such as QGroundControl) is lost. ([PX4 Safety Configuration](https://docs.px4.io/main/en/config/safety.html))\n\nYou can set it to:\n- Disabled\n- Hold mode\n- Return mode\n- Land mode\n- Disarm\n- Terminate\n\nTwo other settings go with it:\n- **`COM_DL_LOSS_T`** (Data Link Loss Timeout): how long the link has to be down before the failsafe starts.\n- **`COM_DLL_EXCEPT`**: flight modes where losing the data link is ignored.\n\nThis is separate from the response to losing your RC/manual control link, which has its own failsafe settings. The Offboard-loss failsafe is also separate: it uses `COM_OBL_RC_ACT` and `COM_OF_LOSS_T` ([Offboard mode](https://docs.px4.io/main/en/flight_modes/offboard.html))."
+    },
+    {
+      "id": "geofence",
+      "passed": true,
+      "failures": [],
+      "seconds": 16.49,
+      "cost_usd": 0.053299,
+      "tools": [
+        "search_docs",
+        "search_docs"
+      ],
+      "answer": "PX4 keeps a vehicle inside an area with a **geofence**, which is a virtual boundary for where the vehicle can fly. The geofence works in every mode, both missions and manual flight ([Geofence](https://docs.px4.io/main/en/flying/geofence.html)). You can set it up in two separate ways:\n\n**1. Failsafe geofence (a simple cylinder)**\n- A cylinder centred on the home position. You set its size with two parameters ([Safety Configuration](https://docs.px4.io/main/en/config/safety.html)):\n  - `GF_MAX_HOR_DIST`: the maximum radius. Setting it to 0 turns this limit off.\n  - `GF_MAX_VER_DIST`: the maximum altitude. Setting it to 0 turns this limit off.\n- `GF_ACTION` sets what happens on a breach: None, Warning, Hold mode, Return mode, Terminate or Land.\n- Terminate kills the vehicle. It's blocked by `CBRK_FLIGHTTERM`, which must be set to 0 before Terminate will actually work.\n\n**2. Geofence Plan (complex shapes)**\n- You can combine several circles and polygons. Each one is either an inclusion zone (stay inside) or an exclusion zone (stay outside) ([Geofence](https://docs.px4.io/main/en/flying/geofence.html)).\n- You draw it in QGroundControl: go to Plan View, select Plan Type **Fence**, and use the GeoFence Editor. It sits alongside your mission and rally points.\n\n**Important: the action only fires after the vehicle has already crossed the fence**\n- If you have a strict no-fly boundary, the docs recommend setting `GF_ACTION` to **Hold** and leaving a safety margin of at least ([Safety Configuration](https://docs.px4.io/main/en/config/safety.html)):\n  - **Fixed-wing:** the loiter radius, `NAV_LOITER_RAD`\n  - **Multicopter:** the stopping distance, v\u00b2/2a, where v = `MPC_XY_VEL_MAX` and a = `MPC_ACC_HOR_MAX`\n- Make the margin bigger than these numbers to allow for tailwind, position error and control lag.\n\n**Return mode and the geofence** ([Return Mode](https://docs.px4.io/main/en/flight_modes/return.html))\n- Return mode can plan a path that stays within the geofence.\n- How complex the fence can be depends on `GF_AVOID_NODES`: default 100, maximum 200, reboot required. Each circle uses 8 nodes, and each polygon uses one per corner plus extras for sharp corners. Setting it to 0 turns this feature off.\n- If the fence needs too many nodes, or no route is possible, the vehicle flies straight to the destination. Your `GF_ACTION` still applies on that straight path.\n- Areas that can't be reached because of the margin are only flagged when a Return is triggered, not when you upload the fence.\n\nRelated safety features, like other failsafes and rally points, are listed on the [Safety](https://docs.px4.io/main/en/config/safety_intro.html) page. A geofence won't give you airspace authorization or check NOTAMs and TFRs for you. You still need to get those separately."
+    },
+    {
+      "id": "rally",
+      "passed": true,
+      "failures": [],
+      "seconds": 10.814,
+      "cost_usd": 0.022668,
+      "tools": [
+        "search_docs"
+      ],
+      "answer": "In PX4, safety points (QGroundControl calls them **rally points**) are other places the vehicle can fly to and land when it enters Return Mode. It doesn't have to go back to where it took off.\n\n**What they do**\n- When they're enabled, the vehicle picks the **closest** of these: the home location, a mission landing pattern, or a safety point ([Safety Points](https://docs.px4.io/main/en/flying/plan_safety_points.html)).\n- **Multicopters** use the home/rally point return type by default. The vehicle climbs to a safe altitude if it needs to, flies to the closest rally point or home position along the shortest horizontal path that stays inside the geofence, and then lands ([Return Mode (Multicopter)](https://docs.px4.io/main/en/flight_modes_mc/return.html)).\n- They're one of the ways PX4 chooses a safe return path and landing spot. The others are the home location, mission paths and mission landing sequences ([Return Mode overview](https://docs.px4.io/main/en/flight_modes/return.html)). PX4 lists them with its safety features, next to failsafes and the geofence ([Safety](https://docs.px4.io/main/en/config/safety_intro.html)).\n\n**How to set them up (QGroundControl)**\n1. Open **Plan View**, then select the **Rally** tab in the Plan Editor.\n2. Click the **Rally Point** button on the toolbar, then click on the map to place a point. It shows up as an **R**.\n3. Click **Upload Required** to send the points to the vehicle. Any mission and geofence get uploaded at the same time ([Creating Safety Points](https://docs.px4.io/main/en/flying/plan_safety_points.html)).\n\nThey're most useful on long flights, where a nearby safe landing spot is better than a long trip home on a low battery."
+    },
+    {
+      "id": "live_weather",
+      "passed": true,
+      "failures": [],
+      "seconds": 10.459,
+      "cost_usd": 0.020288,
+      "tools": [
+        "check_part107_weather"
+      ],
+      "answer": "**Yes. The latest KPHX weather meets the Part 107 visibility and cloud-clearance limits for a flight at 200 ft AGL.**\n\n**Observation:** KPHX at 0751Z on Nov 6\n`METAR KPHX 060751Z 24003KT 10SM FEW150 SCT200 18/11 A2996 RMK AO2 SLP133 T01780111 $`\n\n| Check | Reported | Minimum | Result |\n|---|---|---|---|\n| Visibility (14 CFR 107.51(c)) | 10+ SM | 3 SM | Pass |\n| Distance below clouds (14 CFR 107.51(d)(1)) | Lowest clouds at 15,000 ft, so 14,800 ft above you | 500 ft | Pass |\n\nWind is light: 3 kt from 240\u00b0, no gusts.\n\n**What this check doesn't cover:**\n- **Horizontal cloud distance:** A METAR can't show whether clouds are at least 2,000 ft away sideways (14 CFR 107.51(d)(2)). You'll need to judge that on site.\n- **Distance from the airport:** The report describes the KPHX station, which may be miles from where you fly.\n- **Maintenance flag:** The `$` at the end means the weather station needs maintenance. Treat the data with some caution.\n- **Night flying:** 0751Z is just before 1 AM local time in Phoenix. If you'd be flying at night, extra rules apply that this check doesn't look at. I can look up those requirements if you'd like.\n\nThis only covers the weather. You still need to check airspace (KPHX is a busy Class B airport, so you'll likely need LAANC authorization near it), NOTAMs and TFRs. The final go/no-go call is yours as remote pilot in command."
+    },
+    {
+      "id": "live_airspace",
+      "passed": true,
+      "failures": [],
+      "seconds": 9.053,
+      "cost_usd": 0.019856,
+      "tools": [
+        "lookup_airspace",
+        "search_docs"
+      ],
+      "answer": "**Yes, you need ATC authorization.** That spot is inside the **Phoenix Class B** airspace, which starts at the surface (0 ft) and goes up to 9,000 ft. It's close to Phoenix Sky Harbor International.\n\n**Why:** [14 CFR \u00a7 107.41](https://www.ecfr.gov/current/title-14/section-107.41) says you can't fly a small drone in Class B, C or D airspace, or in Class E surface areas around airports, without prior permission from ATC. Because this Class B layer starts at the ground, the rule applies at any altitude you could fly.\n\n**Other airspace at this spot:**\n- **Phoenix Sky Harbor Mode C veil** (surface to 10,000 ft)\n- **Class E**, starting at 700 ft and 1,200 ft. Class B already covers these altitudes, so they don't change the answer.\n- **Class A**, starting at 18,000 ft. This doesn't affect drone flights.\n\n**Next steps:**\n- This was only a screening check, not an authorization. Request authorization through LAANC or FAA DroneZone, and expect a maximum altitude based on the grid near the airport.\n- Check NOTAMs and TFRs before you fly. I can't check these.\n- The final decision to fly belongs to you as the remote pilot in command."
+    },
+    {
+      "id": "out_of_scope",
+      "passed": true,
+      "failures": [],
+      "seconds": 7.656,
+      "cost_usd": 0.016088,
+      "tools": [
+        "search_docs"
+      ],
+      "answer": "I can't answer this one. My reference material only covers U.S. FAA Part 107 rules and PX4 autopilot documentation. Nothing in it covers Japan's drone registration rules.\n\n**What my sources do say:**\n- Part 107 only applies to drone registration and operation within the United States ([14 CFR 107.1](https://www.ecfr.gov/current/title-14/section-107.1)). Its registration rule ([14 CFR 107.13](https://www.ecfr.gov/current/title-14/section-107.13)) doesn't apply in Japan.\n- The PX4 guidelines say to check the flight rules wherever you're flying, since many places require a license depending on the drone's size, weight or purpose ([PX4 First Flight Guidelines](https://docs.px4.io/main/en/flying/first_flight_guidelines.html)).\n\n**Where to look instead:** Japan's civil aviation authority, which is part of its Ministry of Land, Infrastructure, Transport and Tourism (MLIT), has the official rules. Check its website for registration requirements, weight limits and fees before you fly there.\n\nI can help with U.S. Part 107 questions or PX4 setup, like failsafes or flight modes, in the meantime."
+    }
+  ]
+}

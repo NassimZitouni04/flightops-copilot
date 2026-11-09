@@ -2,7 +2,9 @@
 
 An AI agent for small drone operators. It answers questions about FAA Part 107 and the PX4 autopilot from the source documents, and checks live weather and airspace through its own MCP server.
 
-> Portfolio project for planning support only. It doesn't replace LAANC authorization, NOTAM and TFR checks, or the remote pilot in command's judgment.
+> **About this repo:** A public rebuild of a drone-ops assistant I worked on at Fireflyt LLC. The original code isn't public, so this version was written from scratch in November 2026. All results below are measured on this rebuild.
+>
+> For planning support only. It doesn't replace LAANC authorization, NOTAM and TFR checks, or the remote pilot in command's judgment.
 
 ## What it does
 
